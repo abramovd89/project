@@ -1,0 +1,73 @@
+/* Уникальные стили для французского курса */
+.cultural-note {
+    background: rgba(237, 41, 57, 0.05);
+    border-left: 3px solid #ED2939;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 0 8px 8px 0;
+}
+
+.cultural-note h4 {
+    color: #002395;
+    margin-top: 0;
+}
+
+.enroll-btn.french {
+    background: #ED2939;
+    position: relative;
+    overflow: hidden;
+}
+
+.enroll-btn.french::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0) 45%,
+        rgba(255,255,255,0.8) 50%,
+        rgba(255,255,255,0) 55%
+    );
+    transform: rotate(30deg);
+    transition: all 0.3s;
+}
+
+.enroll-btn.french:hover::after {
+    left: 100%;
+}
+
+.trial-btn.french {
+    border-color: #ED2939;
+    color: #ED2939;
+}
+
+.trial-btn.french:hover {
+    background: #ED2939;
+    color: white;
+}
+
+/* Анимация Эйфелевой башни */
+@keyframes swing {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+.fa-tower-eiffel {
+    animation: swing 8s infinite ease-in-out;
+}
+
+/* Адаптивность для таймлайна */
+@media (max-width: 768px) {
+    .course-timeline {
+        padding-left: 30px;
+    }
+    
+    .timeline-item::before {
+        left: -28px;
+        width: 15px;
+        height: 15px;
+    }
+}

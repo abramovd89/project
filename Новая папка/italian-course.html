@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Итальянский язык | Lingua</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.8;
+            background-color: #fff9f7;
+            background-image: url('images/italian-texture.jpg');
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Шапка курса */
+        .course-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/italian-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #009246; /* Итальянский зеленый */
+        }
+        
+        .italian-title {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .italian-flag {
+            display: inline-block;
+            width: 60px;
+            height: 90px;
+            background: linear-gradient(to right, 
+                #009246 33%, 
+                white 33%, white 66%, 
+                #CE2B37 66%);
+            margin: 0 15px;
+            vertical-align: middle;
+            border-radius: 3px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        
+        .colosseum-icon {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            background: url('images/colosseum-icon.png') no-repeat center bottom;
+            background-size: contain;
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+        }
+        
+        /* Основной контент */
+        .course-main {
+            padding: 60px 0 100px;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+        }
+        
+        .info-block {
+            margin-bottom: 60px;
+            position: relative;
+            padding: 35px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #CE2B37; /* Итальянский красный */
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: #CE2B37;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            display: inline-block;
+            border-bottom: 3px solid #009246;
+            font-weight: normal;
+        }
+        
+        /* Элементы итальянского стиля */
+        .italian-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .italian-list li {
+            padding: 15px 0 15px 45px;
+            margin-bottom: 15px;
+            background: url('images/italy-icon.png') no-repeat left center;
+            background-size: 30px;
+            border-bottom: 1px solid #f0e0d8;
+            font-size: 1.1rem;
+        }
+        
+        .course-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid #009246;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 80px;
+            height: 80px;
+            background: url('images/wine-icon.png') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+        }
+        
+        /* Боковая панель */
+        .course-sidebar {
+            position: sticky;
+            top: 30px;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            border: 1px solid #f0e0d8;
+            position: relative;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #009246, #CE2B37);
+        }
+        
+        .price {
+            font-size: 3rem;
+            color: #CE2B37;
+            margin: 25px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .price span {
+            font-size: 1.2rem;
+            color: #777;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        .contact-box {
+            background: rgba(206, 43, 55, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #009246;
+            margin-top: 30px;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-sidebar {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .course-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .italian-title {
+                font-size: 2.5rem;
+            }
+            
+            .italian-flag {
+                width: 40px;
+                height: 60px;
+                margin: 0 10px;
+            }
+            
+            .colosseum-icon {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .info-block {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="course-detail">
+        <div class="course-hero">
+            <div class="colosseum-icon"></div>
+            <div class="container">
+                <h1 class="italian-title">Итальянский <span class="italian-flag"></span> язык</h1>
+                <p>Язык искусства, моды и прекрасной кухни</p>
+                <div class="course-rating">
+                    <div class="stars">
+                        ★★★★★ <span>4.8 (94 отзыва)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container course-main">
+            <div class="course-grid">
+                <div class="course-info">
+                    <div class="info-block">
+                        <h2>О курсе</h2>
+                        <p>Наш курс итальянского языка погрузит вас в атмосферу Италии. Программа разработана носителями языка из Рима и Флоренции, с акцентом на живое общение и понимание итальянской культуры.</p>
+                        <p>Особое внимание уделяется музыкальности языка и правильному произношению, которое так важно для итальянской речи.</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Программа обучения</h2>
+                        <ul class="italian-list">
+                            <li>Основы грамматики и произношения</li>
+                            <li>Разговорная практика с носителями</li>
+                            <li>Итальянская культура и традиции</li>
+                            <li>Специальная лексика (искусство, мода, кухня)</li>
+                            <li>Подготовка к экзамену CILS</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Особенности курса</h2>
+                        <div class="course-features">
+                            <div class="feature-card">
+                                <h3>Культура</h3>
+                                <p>Изучение языка через искусство, музыку и кино</p>
+                            </div>
+                            <div class="feature-card">
+                                <h3>Кухня</h3>
+                                <p>Кулинарные термины и традиции итальянской кухни</p>
+                            </div>
+                            <div class="feature-card">
+                                <h3>Путешествия</h3>
+                                <p>Язык для туристов и деловых поездок</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-sidebar">
+                    <div class="info-card">
+                        <h3>Форматы обучения</h3>
+                        <div class="price">8 700 ₽<span>в месяц</span></div>
+                        <ul class="italian-list">
+                            <li>12 занятий с преподавателем</li>
+                            <li>Группы до 8 человек</li>
+                            <li>Все учебные материалы</li>
+                            <li>Доступ к онлайн-ресурсам</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-box">
+                        <h4>Контакты для записи:</h4>
+                        <p>Телефон: +7 (8362) XX-XX-XX</p>
+                        <p>Email: italian@lingua.ru</p>
+                        <p>Адрес: г. Йошкар-Ола</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Культурные мероприятия</h4>
+                        <p>Вечера итальянского кино, дегустации итальянской кухни, мастер-классы по итальянской жестикуляции</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Анимация для иконки Колизея
+        document.addEventListener('DOMContentLoaded', function() {
+            const colosseum = document.querySelector('.colosseum-icon');
+            let angle = 0;
+            
+            function animateColosseum() {
+                angle += 0.3;
+                colosseum.style.transform = `translateX(-50%) rotate(${Math.sin(angle * 0.1) * 2}deg)`;
+                requestAnimationFrame(animateColosseum);
+            }
+            
+            animateColosseum();
+        });
+    </script>
+</body>
+</html>

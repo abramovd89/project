@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingua - Школа иностранных языков</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+</head>
+<body class="container">
+    <div class="preloader">
+    <div class="loader">
+      <span class="dot1"></span>
+      <span class="dot2"></span>
+      <span class="dot3"></span>
+    </div>
+  </div>
+    <div class="content">
+
+    <header class="header">
+        <a class="header__logo">Lingua</a>
+       <!--<nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a class="header__item--link" href="#promo">Главная</a></li>
+                <li class="header__item"><a class="header__item--link" href="#teachers">Преподаватели</a></li>
+                <li class="header__item"><a class="header__item--link" href="#courses">Курсы</a></li>
+                <li class="header__item"><a class="header__item--link" href="#reviews">Отзывы</a></li>
+                <li class="header__item"><a class="header__item--link" href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    -->
+        <button class="header__button" id="authButton" type="button">Войти</button>
+    </header>
+
+    <!-- Модальное окно входа/регистрации -->
+<div class="modal" id="authModal">
+    <div class="modal__content" id="loginForm">
+        <span class="modal__close">&times;</span>
+        <h2 class="modal__title">Вход</h2>
+        <form class="modal__form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit" class="modal__submit">Войти</button>
+            <p class="modal__text">Или</p>
+            <button type="button" class="modal__switch" id="showRegisterBtn">Создать аккаунт</button>
+        </form>
+    </div>
+    
+    <div class="modal__content" id="registerForm" style="display:none;">
+        <span class="modal__close">&times;</span>
+        <h2 class="modal__title">Регистрация</h2>
+        <form class="modal__form">
+            <input type="text" placeholder="Имя" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Пароль" required>
+            <input type="password" placeholder="Подтвердите пароль" required>
+            <button type="submit" class="modal__submit">Зарегистрироваться</button>
+            <p class="modal__text">Уже есть аккаунт?</p>
+            <button type="button" class="modal__switch" id="showLoginBtn">Войти</button>
+        </form>
+    </div>
+</div>
+    <main class="main">
+        <!-- Главный экран -->
+      <section class="section__promo" id="promo">
+        <div class="promo__content">
+            <h1 class="promo__title">Начните свободно говорить на иностранном языке</h1>
+            <p class="promo__text">Интерактивные курсы с носителями языка для быстрого результата</p>
+            <div class="promo__buttons">
+                <a href="#authModal" class="promo__button" id="startLearningBtn">Начать обучение</a>
+                <a href="#authModal" class="promo__info" id="freeLessonBtn">Бесплатный урок</a>
+            </div>
+            <button class="feedback-btn" id="feedbackBtn">Оставить отзыв</button>
+        </div>
+        <div class="promo__images">
+            <img class="promo__main-image" src="images/language_learning.jfif" alt="Изучение языков">
+            <div class="promo__stats">
+                <div class="stat-item">
+                    <span class="stat-number">10 000+</span>
+                    <span class="stat-text">Довольных студентов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-text">Профессиональных преподавателей</span>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Блок преимуществ -->
+        <section class="benefits" id="teachers">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="benefits__grid">
+                <div class="benefit-card">
+                    <i class="fas fa-user-tie benefit-icon"></i>
+                    <h3>Носители языка</h3>
+                    <p>Все преподаватели - дипломированные специалисты с международными сертификатами</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-calendar-alt benefit-icon"></i>
+                    <h3>Гибкое расписание</h3>
+                    <p>Занимайтесь в удобное время из любой точки мира</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line benefit-icon"></i>
+                    <h3>Гарантия результата</h3>
+                    <p>98% студентов достигают поставленных целей в срок</p>
+                </div>
+            </div>
+        </section>
+    <!-- Курсы -->
+    <section class="courses" id="courses">
+        <h2 class="section-title">Наши курсы</h2>
+        <div class="courses-container">
+            <!-- Карточка 1 - Английский -->
+            <div class="course-card">
+                <div class="course-image-container">
+                    <img src="images/English.jpg" alt="Курс английского" class="course-image">
+                    <div class="course-overlay"></div>
+                    <div class="course-level">A1-C2</div>
+                </div>
+                <div class="course-content">
+                    <h3>Английский язык</h3>
+                    <p>Начните свободно говорить за 3 месяца</p>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> 3 месяца</span>
+                        <span><i class="fas fa-users"></i> 6 человек</span>
+                    </div>
+                    <a href="english-course.html" class="course-btn">
+                        Подробнее
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 2 - Французский -->
+            <div class="course-card">
+                <div class="course-image-container">
+                    <img src="images/french.jpg" alt="Курс французского" class="course-image">
+                    <div class="course-overlay"></div>
+                    <div class="course-level">A1-B2</div>
+                </div>
+                <div class="course-content">
+                    <h3>Французский язык</h3>
+                    <p>Язык любви и искусства</p>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> 4 месяца</span>
+                        <span><i class="fas fa-users"></i> 8 человек</span>
+                    </div>
+                    <a href="french-course.html" class="course-btn">
+                        Подробнее
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 3 - Португальский -->
+            <div class="course-card">
+                <div class="course-image-container">
+                    <img src="images/brazil.jpg" alt="Курс португальского" class="course-image">
+                    <div class="course-overlay"></div>
+                    <div class="course-level">A1-B1</div>
+                </div>
+                <div class="course-content">
+                    <h3>Португальский язык</h3>
+                    <p>Яркий и страстный португальский</p>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> 5 месяцев</span>
+                        <span><i class="fas fa-users"></i> 6 человек</span>
+                    </div>
+                    <a href="portuguese-course.html" class="course-btn">
+                        Подробнее
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 4 - Испанский -->
+            <div class="course-card">
+                <div class="course-image-container">
+                    <img src="images/spanish.jpg" alt="Курс испанского" class="course-image">
+                    <div class="course-overlay"></div>
+                    <div class="course-level">A1-B2</div>
+                </div>
+                <div class="course-content">
+                    <h3>Испанский язык</h3>
+                    <p>Один из самых популярных языков в мире</p>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> 4 месяца</span>
+                        <span><i class="fas fa-users"></i> 8 человек</span>
+                    </div>
+                    <a href="spanish-course.html" class="course-btn">
+                        Подробнее
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 5 - Немецкий -->
+            <div class="course-card">
+                <div class="course-image-container">
+                    <img src="images/german.jpg" alt="Курс немецкого" class="course-image">
+                    <div class="course-overlay"></div>
+                    <div class="course-level">A1-C1</div>
+                </div>
+                <div class="course-content">
+                    <h3>Немецкий язык</h3>
+                    <p>Язык науки и технологий</p>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> 6 месяцев</span>
+                        <span><i class="fas fa-users"></i> 6 человек</span>
+                    </div>
+                    <a href="german-course.html" class="course-btn">
+                        Подробнее
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 6 - Японский -->
+            <div class="course-card">
+                <div class="course-image-container">
+                    <img src="images/japan.jpg" alt="Курс японского" class="course-image">
+                    <div class="course-overlay"></div>
+                    <div class="course-level">N5-N3</div>
+                </div>
+                <div class="course-content">
+                    <h3>Японский язык</h3>
+                    <p>Погрузитесь в культуру Страны восходящего солнца</p>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> 8 месяцев</span>
+                        <span><i class="fas fa-users"></i> 5 человек</span>
+                    </div>
+                    <a href="japanese-course.html" class="course-btn">
+                        Подробнее
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 7 - Китайский -->
+            <div class="course-card">
+                <div class="course-image-container">
+                    <img src="images/china.jpg" alt="Курс китайского" class="course-image">
+                    <div class="course-overlay"></div>
+                    <div class="course-level">HSK 1-3</div>
+                </div>
+                <div class="course-content">
+                    <h3>Китайский язык</h3>
+                    <p>Откройте для себя самый распространенный язык в мире</p>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> 10 месяцев</span>
+                        <span><i class="fas fa-users"></i> 5 человек</span>
+                    </div>
+                    <a href="chinese-course.html" class="course-btn">
+                        Подробнее
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 8 - Итальянский -->
+            <div class="course-card">
+                <div class="course-image-container">
+                    <img src="images/italian.jpg" alt="Курс итальянского" class="course-image">
+                    <div class="course-overlay"></div>
+                    <div class="course-level">A1-B2</div>
+                </div>
+                <div class="course-content">
+                    <h3>Итальянский язык</h3>
+                    <p>Язык искусства, моды и кухни</p>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> 5 месяцев</span>
+                        <span><i class="fas fa-users"></i> 8 человек</span>
+                    </div>
+                    <a href="italian-course.html" class="course-btn">
+                        Подробнее
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 9 - Арабский -->
+            <div class="course-card">
+                <div class="course-image-container">
+                    <img src="images/arab.jpg" alt="Курс арабского" class="course-image">
+                    <div class="course-overlay"></div>
+                    <div class="course-level">Начальный</div>
+                </div>
+                <div class="course-content">
+                    <h3>Арабский язык</h3>
+                    <p>Изучайте богатую культуру и литературу</p>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> 12 месяцев</span>
+                        <span><i class="fas fa-users"></i> 5 человек</span>
+                    </div>
+                    <a href="arabic-course.html" class="course-btn">
+                        Подробнее
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="course-nav">
+            <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="dots-container"></div>
+            <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+        <!-- Отзывы -->
+        <section class="reviews" id="reviews">
+            <h2 class="section-title">Отзывы</h2>
+            <div class="reviews-container">
+                <div class="review">
+                    <div class="review-author">Александра</div>
+                    <div class="review-text">Курс понравился: информация понятно и ёмко скомпонована. После курса многое оседает в голове, а это именно то, что необходимо. Преподаватель очень понравилась. Материал объясняет доступно, много раз повторяет, разъясняет и уточняет, чтобы вопросов не оставалось.</div>
+                </div>
+                <div class="review">
+                    <div class="review-author">Мария</div>
+                    <div class="review-text">Очень жалею, что не попала в эту школу раньше. Только сейчас, по этой методике, немного стала понимать английский язык. Отношение преподавателя к обучающимся выше всяких похвал!</div>
+                </div>
+                <div class="review">
+                    <div class="review-author">Максим</div>
+                    <div class="review-text">Курс прошёл в очень тёплой и веселой атмосфере, на протяжении всего курса всё было ясно и понятно. Преподаватель очень доброжелательная и отзывчивая.</div>
+                </div>
+            </div>
+        </section>
+<section class="cta-section">
+    <div class="cta-container">
+        <div class="cta-content">
+            <h2 class="cta-title">Готовы начать свое языковое путешествие?</h2>
+            <p class="cta-text">Пройдите бесплатный тест и получите персональную программу обучения</p>
+            <a href="program.html" class="cta-button">Получить программу</a>
+        </div>
+        <div class="cta-image-wrapper">
+            <img class="cta-images" src="images/travel.jpg" alt="Изучение языков">
+        </div>
+    </div>
+</section>
+
+<!-- Отдельная секция для карусели -->
+<section class="swiper-section">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/slide1.jfif" alt=""></div>
+            <div class="swiper-slide"><img src="images/slide2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/slide3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/slide4.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/slide5.png" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+    </main>
+
+    <footer class="footer" id="contacts">
+        <div class="footer__content">
+            <div class="footer__info">
+                <h3 class="footer__title">Lingua</h3>
+                <p class="footer__text">Изучайте языки с лучшими преподавателями</p>
+                <div class="footer__contacts">
+                    <p><i class="fas fa-envelope"></i> Email: info@lingua.ru</p>
+                    <p><i class="fas fa-phone"></i> Телефон: +7 (123) 456-78-90</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Адрес: г. Йошкар-Ола</p>
+                </div>
+                <div class="footer__social">
+                    <a href="https://vk.com" target="_blank" class="social__link"><i class="fab fa-vk"></i></a>
+                    <a href="https://telegram.org" target="_blank" class="social__link"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="#promo">Главная</a></li>
+                    <li><a href="#teachers">Преподаватели</a></li>
+                    <li><a href="#courses">Курсы</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            &copy; 2023 Lingua. Все права защищены.
+            Автор - Абрамов Дмитрий
+        </div>
+    </footer>
+
+    <!-- Модальное окно отзыва -->
+    <div class="modal" id="feedbackModal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <h2 class="modal__title">Оставить отзыв</h2>
+            <p>Чтобы оставить отзыв, пожалуйста, войдите или зарегистрируйтесь</p>
+            <button class="modal__switch" id="goToAuth">Войти</button>
+        </div>
+    </div>
+
+    <!-- Кнопка наверх -->
+    <button class="scroll-top" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    </div>
+
+
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+</html>

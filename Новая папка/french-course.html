@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Французский язык | Lingua</title>
+    <link rel="stylesheet" href="styles/french-course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Уникальные стили для французского курса */
+        .course-hero {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/french-bg.jpg');
+        }
+        
+        .french-accent {
+            color: #ED2939; /* Французский красный */
+        }
+        
+        .eiffel-icon {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            font-size: 2rem;
+            color: #ED2939;
+            opacity: 0.7;
+        }
+        
+        .course-timeline {
+            position: relative;
+            padding-left: 50px;
+            margin: 40px 0;
+        }
+        
+        .course-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, #ED2939, #002395);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #002395; /* Французский синий */
+            border: 3px solid #ED2939;
+        }
+    </style>
+</head>
+<body>
+    <section class="course-detail">
+        <div class="course-hero">
+            <div class="container">
+                <i class="fas fa-tower-eiffel eiffel-icon"></i>
+                <h1>Французский <span class="french-accent">язык</span></h1>
+                <p>Язык любви, искусства и высокой моды</p>
+                <div class="course-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4.2 (94 отзыва)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container course-main">
+            <div class="course-grid">
+                <div class="course-info">
+                    <div class="info-block">
+                        <h2><i class="fas fa-info-circle french-accent"></i> О курсе</h2>
+                        <p>Погрузитесь в красоту французского языка с нашим уникальным курсом, разработанным носителями языка из Парижа. Программа сочетает традиционные методы обучения с современными коммуникативными техниками.</p>
+                        <p>Особое внимание уделяется произношению и музыкальности языка, что делает наш курс идеальным для тех, кто ценит эстетику французской речи.</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h2><i class="fas fa-tasks french-accent"></i> Программа обучения</h2>
+                        <div class="course-timeline">
+                            <div class="timeline-item">
+                                <h3>Базовый уровень (A1-A2)</h3>
+                                <p>Основы грамматики, повседневная лексика, французские реалии</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>Средний уровень (B1-B2)</h3>
+                                <p>Чтение литературы, просмотр фильмов, деловая переписка</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>Продвинутый уровень (C1)</h3>
+                                <p>Изучение культурных аспектов, специализированная лексика</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <h2><i class="fas fa-chart-line french-accent"></i> Результаты</h2>
+                        <ul class="results-list">
+                            <li><i class="fas fa-check-circle french-accent"></i> Сможете читать французскую литературу в оригинале</li>
+                            <li><i class="fas fa-check-circle french-accent"></i> Поймете французские фильмы без субтитров</li>
+                            <li><i class="fas fa-check-circle french-accent"></i> Свободно поддержите беседу на бытовые темы</li>
+                            <li><i class="fas fa-check-circle french-accent"></i> Приобретете парижское произношение</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-sidebar">
+                    <div class="pricing-card" style="border-top: 4px solid #ED2939;">
+                        <h3>Начните обучение</h3>
+                        <div class="price">7 500 ₽<span>/месяц</span></div>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check french-accent"></i> 10 занятий с носителем</li>
+                            <li><i class="fas fa-check french-accent"></i> До 8 человек в группе</li>
+                            <li><i class="fas fa-check french-accent"></i> Культурные вечера</li>
+                            <li><i class="fas fa-check french-accent"></i> Виртуальные экскурсии по Франции</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cultural-note">
+                        <h4><i class="fas fa-wine-glass-alt french-accent"></i> Французские вечера</h4>
+                        <p>Каждый месяц мы проводим тематические встречи с дегустацией французской кухни и просмотром кино</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="floating-shapes">
+        <div class="shape shape-1" style="background: #ED2939;"></div>
+        <div class="shape shape-2" style="background: #002395;"></div>
+        <div class="shape shape-3" style="background: #ED2939;"></div>
+    </div>
+    
+    
+</body>
+</html>

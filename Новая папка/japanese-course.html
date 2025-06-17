@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Японский язык | Lingua</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Meiryo', 'Yu Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.8;
+            background-color: #fff9f9;
+            background-image: url('images/washi-paper-texture.jpg');
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Шапка курса */
+        .course-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/japanese-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            border-bottom: 2px solid #bc002d;
+        }
+        
+        .japanese-title {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .kanji {
+            color: #bc002d; /* Японский красный */
+            font-size: 4.5rem;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+        
+        .sakura-branch {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            width: 150px;
+            height: 150px;
+            background: url('images/sakura-branch.png') no-repeat;
+            background-size: contain;
+            opacity: 0.8;
+        }
+        
+        /* Основной контент */
+        .course-main {
+            padding: 60px 0 80px;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 50px;
+        }
+        
+        .info-block {
+            margin-bottom: 60px;
+            position: relative;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 2px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            border-bottom: 2px solid #bc002d;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: inline-block;
+            font-weight: normal;
+        }
+        
+        /* Элементы японского стиля */
+        .japanese-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .japanese-list li {
+            padding: 12px 0 12px 40px;
+            margin-bottom: 10px;
+            background: url('images/red-circle.png') no-repeat left center;
+            background-size: 25px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .level-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .level-card {
+            background: white;
+            padding: 25px;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-top: 3px solid #bc002d;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .level-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: url('images/kanji-bg.png') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+        }
+        
+        /* Боковая панель */
+        .course-sidebar {
+            position: sticky;
+            top: 30px;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 2px;
+            padding: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #f0f0f0;
+            position: relative;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #bc002d, #fff);
+        }
+        
+        .price {
+            font-size: 2.8rem;
+            color: #333;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: lighter;
+        }
+        
+        .price span {
+            font-size: 1.2rem;
+            color: #777;
+        }
+        
+        .contact-box {
+            background: rgba(188, 0, 45, 0.05);
+            padding: 20px;
+            border-radius: 2px;
+            border-left: 3px solid #bc002d;
+            margin-top: 30px;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-sidebar {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .course-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .japanese-title {
+                font-size: 2.5rem;
+            }
+            
+            .kanji {
+                font-size: 3.5rem;
+            }
+            
+            .sakura-branch {
+                width: 100px;
+                height: 100px;
+                right: 20px;
+                top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="course-detail">
+        <div class="course-hero">
+            <div class="sakura-branch"></div>
+            <div class="container">
+                <h1 class="japanese-title">Японский <span class="kanji">日</span> язык</h1>
+                <p>Погрузитесь в культуру Страны восходящего солнца</p>
+                <div class="course-rating">
+                    <div class="stars">
+                        ★★★★★ <span>4.7 (86 отзывов)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container course-main">
+            <div class="course-grid">
+                <div class="course-info">
+                    <div class="info-block">
+                        <h2>О курсе</h2>
+                        <p>Наш курс японского языка предлагает комплексный подход к изучению всех аспектов языка: иероглифика (кандзи), грамматика, разговорная речь и аудирование. Программа разработана носителями языка из Токио.</p>
+                        <p>Особое внимание уделяется правильному написанию иероглифов и вежливым формам речи (кэйго).</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Программа обучения</h2>
+                        <ul class="japanese-list">
+                            <li>Изучение азбук хирагана и катакана</li>
+                            <li>Базовые иероглифы (кандзи) JLPT N5-N3</li>
+                            <li>Грамматические конструкции</li>
+                            <li>Разговорная практика с носителями</li>
+                            <li>Японская культура и этикет</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Уровни подготовки</h2>
+                        <div class="level-cards">
+                            <div class="level-card">
+                                <h3>Начальный (N5)</h3>
+                                <p>Основы японского, 100 иероглифов, простые диалоги</p>
+                            </div>
+                            <div class="level-card">
+                                <h3>Средний (N4-N3)</h3>
+                                <p>300 иероглифов, грамматика, чтение простых текстов</p>
+                            </div>
+                            <div class="level-card">
+                                <h3>Продвинутый (N2)</h3>
+                                <p>1000 иероглифов, сложные тексты, деловое общение</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-sidebar">
+                    <div class="info-card">
+                        <h3>Форматы обучения</h3>
+                        <div class="price">9 800 ₽<span>/месяц</span></div>
+                        <ul class="japanese-list">
+                            <li>Групповые занятия (до 6 человек)</li>
+                            <li>12 уроков в месяц</li>
+                            <li>Все учебные материалы</li>
+                            <li>Практика каллиграфии</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-box">
+                        <h4>Контакты для записи:</h4>
+                        <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                        <p>Email: japanese@lingua.ru</p>
+                        <p>Адрес: г. Йошкар-Ола</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Культурные мероприятия</h4>
+                        <p>Чайные церемонии, каллиграфия, аниме-клуб и другие мероприятия для погружения в культуру</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Анимация лепестков сакуры
+        document.addEventListener('DOMContentLoaded', function() {
+            const sakura = document.querySelector('.sakura-branch');
+            let angle = 0;
+            
+            function animateSakura() {
+                angle += 0.3;
+                sakura.style.transform = `rotate(${Math.sin(angle * 0.1) * 5}deg)`;
+                requestAnimationFrame(animateSakura);
+            }
+            
+            animateSakura();
+            
+            // Параллакс эффект для фона
+            window.addEventListener('mousemove', function(e) {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                document.body.style.backgroundPosition = `${x * 20}px ${y * 20}px`;
+            });
+        });
+    </script>
+</body>
+</html>

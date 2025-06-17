@@ -1,0 +1,64 @@
+/* Уникальные стили для португальского курса */
+.cultural-note.portuguese {
+    background: rgba(4, 106, 56, 0.05);
+    border-left: 3px solid #046A38;
+}
+
+.cultural-note.portuguese h4 {
+    color: #046A38;
+}
+
+.enroll-btn.portuguese {
+    background: #046A38;
+    position: relative;
+    overflow: hidden;
+}
+
+.enroll-btn.portuguese::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.enroll-btn.portuguese:hover::before {
+    left: 100%;
+}
+
+.trial-btn.portuguese {
+    border-color: #046A38;
+    color: #046A38;
+}
+
+.trial-btn.portuguese:hover {
+    background: #046A38;
+    color: white;
+}
+
+/* Анимация плитки азулежу */
+.azulejo-pattern {
+    transition: transform 0.3s ease-out;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .course-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .azulejo-pattern {
+        width: 100px;
+        height: 100px;
+        right: 15px;
+        top: 15px;
+    }
+}

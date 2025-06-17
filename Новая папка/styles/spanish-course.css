@@ -1,0 +1,63 @@
+/* Уникальные стили для испанского курса */
+.cultural-note.spanish {
+    background: rgba(170, 21, 27, 0.05);
+    border-left: 3px solid #AA151B;
+}
+
+.cultural-note.spanish h4 {
+    color: #AA151B;
+}
+
+.enroll-btn.spanish {
+    background: #AA151B;
+    position: relative;
+    overflow: hidden;
+}
+
+.enroll-btn.spanish:hover {
+    background: #8a1117;
+}
+
+.trial-btn.spanish {
+    border-color: #AA151B;
+    color: #AA151B;
+}
+
+.trial-btn.spanish:hover {
+    background: #AA151B;
+    color: white;
+}
+
+.star {
+    color: #F1BF00;
+    font-size: 1.2rem;
+}
+
+/* Анимация для шагов */
+.step-item {
+    transition: transform 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateX(10px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .flamenco-icon {
+        width: 40px;
+        height: 40px;
+        right: 15px;
+        top: 15px;
+    }
+    
+    .step-item {
+        padding-left: 60px;
+    }
+    
+    .step-item::before {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}

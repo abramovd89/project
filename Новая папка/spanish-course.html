@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Испанский язык | Lingua</title>
+    <link rel="stylesheet" href="styles/spanish-course.css">
+    <style>
+        /* Уникальные стили для испанского курса */
+        .course-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/spanish-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .spanish-accent {
+            color: #AA151B; /* Испанский красный */
+        }
+        
+        .flamenco-icon {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            width: 60px;
+            height: 60px;
+            background: url('images/flamenco-icon.png') no-repeat;
+            background-size: contain;
+            z-index: 1;
+        }
+        
+        .course-steps {
+            counter-reset: step-counter;
+            margin: 40px 0;
+        }
+        
+        .step-item {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 30px;
+            min-height: 60px;
+        }
+        
+        .step-item::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: #AA151B;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(170, 21, 27, 0.3);
+        }
+        
+        .step-item:nth-child(even)::before {
+            background: #F1BF00; /* Испанский желтый */
+        }
+        
+        .sunburst {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            left: -50px;
+            background: url('images/sunburst.png') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="course-detail">
+        <div class="course-hero">
+            <div class="sunburst"></div>
+            <div class="container">
+                <div class="flamenco-icon"></div>
+                <h1>Испанский <span class="spanish-accent">язык</span></h1>
+                <p>Один из самых популярных и страстных языков в мире</p>
+                <div class="course-rating">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span>4.8 (132 отзыва)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container course-main">
+            <div class="course-grid">
+                <div class="course-info">
+                    <div class="info-block">
+                        <h2><span class="spanish-accent">◆</span> О курсе</h2>
+                        <p>Наш курс испанского языка погрузит вас в культуру Испании и Латинской Америки. Программа разработана носителями языка из Мадрида и Буэнос-Айреса, что позволяет изучать оба варианта испанского.</p>
+                        <p>Особый акцент делается на разговорную практику и понимание различных акцентов.</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h2><span class="spanish-accent">◆</span> Этапы обучения</h2>
+                        <div class="course-steps">
+                            <div class="step-item">
+                                <h3>Базовый уровень</h3>
+                                <p>Основы грамматики, повседневная лексика, правила чтения</p>
+                            </div>
+                            <div class="step-item">
+                                <h3>Разговорная практика</h3>
+                                <p>Темы: путешествия, еда, культура, традиции</p>
+                            </div>
+                            <div class="step-item">
+                                <h3>Региональные особенности</h3>
+                                <p>Различия между испанским и латиноамериканским вариантами</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <h2><span class="spanish-accent">◆</span> Результаты</h2>
+                        <ul class="results-list">
+                            <li><span class="spanish-accent">►</span> Сможете свободно общаться в испаноязычных странах</li>
+                            <li><span class="spanish-accent">►</span> Поймете испанские сериалы и музыку</li>
+                            <li><span class="spanish-accent">►</span> Научитесь различать региональные акценты</li>
+                            <li><span class="spanish-accent">►</span> Приобретете правильное произношение</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-sidebar">
+                    <div class="pricing-card" style="border-top: 4px solid #AA151B;">
+                        <h3>Начните обучение</h3>
+                        <div class="price">7 200 ₽<span>/месяц</span></div>
+                        <ul class="price-features">
+                            <li><span class="spanish-accent">✓</span> 10 занятий с носителями</li>
+                            <li><span class="spanish-accent">✓</span> До 8 человек в группе</li>
+                            <li><span class="spanish-accent">✓</span> Культурные мероприятия</li>
+                            <li><span class="spanish-accent">✓</span> Доступ к материалам</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cultural-note" style="border-left: 3px solid #AA151B;">
+                        <h4><span class="spanish-accent">♫</span> Вечера фламенко</h4>
+                        <p>Раз в месяц проводим тематические вечера с элементами фламенко</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="floating-shapes">
+        <div class="shape" style="background: #AA151B;"></div>
+        <div class="shape" style="background: #F1BF00;"></div>
+        <div class="shape" style="background: #AA151B;"></div>
+    </div>
+    
+    <script>
+        // Локальные скрипты без внешних зависимостей
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация иконки фламенко
+            const flamencoIcon = document.querySelector('.flamenco-icon');
+            let angle = 0;
+            
+            function animateFlamenco() {
+                angle += 0.5;
+                flamencoIcon.style.transform = `rotate(${Math.sin(angle * 0.1) * 10}deg)`;
+                requestAnimationFrame(animateFlamenco);
+            }
+            
+            animateFlamenco();
+            
+            // Параллакс для солнечных лучей
+            window.addEventListener('mousemove', function(e) {
+                const sunburst = document.querySelector('.sunburst');
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                
+                sunburst.style.transform = `translate(${(x - 0.5) * 20}px, ${(y - 0.5) * 20}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

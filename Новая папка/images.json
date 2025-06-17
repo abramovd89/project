@@ -1,0 +1,10 @@
+[
+    {
+        "imageUrl": [
+            "images/travel.jpg",
+            "images/slide2.jpg"
+        ],
+        "imageAlt": "Путешествия",
+        "imageWidth": 100
+    }
+]

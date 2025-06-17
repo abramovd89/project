@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональная программа обучения | Lingua</title>
+    <link rel="stylesheet" href="styles/program.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Lingua</div>
+            <nav>
+                <a href="index.html" style="color: white;">На главную</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="program-section">
+        <div class="container">
+            <h1 class="program-title">Получите персональную программу обучения</h1>
+            <div class="program-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="language">Язык для изучения</label>
+                        <select id="language" required>
+                            <option value="">Выберите язык</option>
+                            <option value="english">Английский</option>
+                            <option value="spanish">Испанский</option>
+                            <option value="french">Французский</option>
+                            <option value="german">Немецкий</option>
+                            <option value="japanese">Японский</option>
+                            <option value="Chinese">Китайский</option>
+                            <option value="italian">Итальянский</option>
+                            <option value="arabic">Арабский</option>
+                            <option value="portuguese">Португальский</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level">Ваш текущий уровень</label>
+                        <select id="level" required>
+                            <option value="">Выберите уровень</option>
+                            <option value="beginner">Начинающий</option>
+                            <option value="intermediate">Средний</option>
+                            <option value="advanced">Продвинутый</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить и получить программу</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Lingua. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

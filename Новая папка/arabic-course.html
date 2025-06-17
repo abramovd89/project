@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арабский язык | Lingua</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.8;
+            background-color: #f9f6ee;
+            background-image: url('images/arabic-pattern.png');
+            background-size: 300px;
+            background-blend-mode: overlay;
+            text-align: right;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Шапка курса */
+        .course-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/arabic-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #007a3d;
+        }
+        
+        .arabic-title {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .arabic-script {
+            color: #ce1126; /* Арабский красный */
+            font-size: 4rem;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+        }
+        
+        .mosque-icon {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            width: 120px;
+            height: 120px;
+            background: url('images/mosque-icon.png') no-repeat;
+            background-size: contain;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+        }
+        
+        /* Основной контент */
+        .course-main {
+            padding: 60px 0 100px;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+        }
+        
+        .info-block {
+            margin-bottom: 60px;
+            position: relative;
+            padding: 35px;
+            background-color: rgba(255, 255, 255, 0.93);
+            border-radius: 5px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-right: 3px solid #007a3d;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: #007a3d; /* Арабский зеленый */
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            display: inline-block;
+            border-bottom: 3px solid #ce1126;
+            font-weight: normal;
+        }
+        
+        /* Элементы арабского стиля */
+        .arabic-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .arabic-list li {
+            padding: 15px 0 15px 40px;
+            margin-bottom: 15px;
+            background: url('images/arabic-star.png') no-repeat left center;
+            background-size: 25px;
+            border-bottom: 1px dashed #ddd;
+            font-size: 1.1rem;
+        }
+        
+        .level-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+        
+        .level-card {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid #007a3d;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .level-card::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 70px;
+            height: 70px;
+            background: url('images/arabic-pattern-small.png') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+        }
+        
+        /* Боковая панель */
+        .course-sidebar {
+            position: sticky;
+            top: 30px;
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 5px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            border: 1px solid #f0e9d9;
+            position: relative;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to left, #007a3d, #ce1126);
+        }
+        
+        .price {
+            font-size: 3rem;
+            color: #007a3d;
+            margin: 25px 0;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+        }
+        
+        .price span {
+            font-size: 1.2rem;
+            color: #777;
+            display: block;
+            margin-top: 5px;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .contact-box {
+            background: rgba(0, 122, 61, 0.05);
+            padding: 25px;
+            border-radius: 5px;
+            border-right: 3px solid #ce1126;
+            margin-top: 30px;
+            text-align: right;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-sidebar {
+                position: static;
+                direction: ltr;
+                text-align: left;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .course-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .arabic-title {
+                font-size: 2.5rem;
+            }
+            
+            .arabic-script {
+                font-size: 3rem;
+            }
+            
+            .mosque-icon {
+                width: 80px;
+                height: 80px;
+                left: 20px;
+                top: 20px;
+            }
+            
+            .info-block {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="course-detail">
+        <div class="course-hero">
+            <div class="mosque-icon"></div>
+            <div class="container">
+                <h1 class="arabic-title">Арабский <span class="arabic-script">لغة</span> язык</h1>
+                <p>Изучайте богатую культуру и литературу арабского мира</p>
+                <div class="course-rating">
+                    <div class="stars">
+                        ★★★★★ <span>4.5 (78 отзывов)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container course-main">
+            <div class="course-grid">
+                <div class="course-info">
+                    <div class="info-block">
+                        <h2>О курсе</h2>
+                        <p>Наш курс арабского языка предлагает комплексное изучение современного стандартного арабского языка (MSA) с элементами разговорных диалектов. Программа разработана носителями языка с учетом особенностей изучения арабского русскоязычными студентами.</p>
+                        <p>Особое внимание уделяется арабской каллиграфии и правильному произношению гортанных звуков.</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Программа обучения</h2>
+                        <ul class="arabic-list">
+                            <li>Арабский алфавит и письменность</li>
+                            <li>Основы грамматики и морфологии</li>
+                            <li>Чтение Корана и классических текстов</li>
+                            <li>Разговорная практика</li>
+                            <li>Арабская каллиграфия</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Уровни подготовки</h2>
+                        <div class="level-cards">
+                            <div class="level-card">
+                                <h3>Начальный уровень</h3>
+                                <p>Алфавит, основы чтения и письма, простые диалоги</p>
+                            </div>
+                            <div class="level-card">
+                                <h3>Средний уровень</h3>
+                                <p>Грамматика, чтение текстов, составление предложений</p>
+                            </div>
+                            <div class="level-card">
+                                <h3>Продвинутый уровень</h3>
+                                <p>Литературный арабский, анализ текстов, деловое общение</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-sidebar">
+                    <div class="info-card">
+                        <h3>Форматы обучения</h3>
+                        <div class="price">9 200 ₽<span>в месяц</span></div>
+                        <ul class="arabic-list">
+                            <li>Групповые занятия (до 6 человек)</li>
+                            <li>10 уроков в месяц</li>
+                            <li>Все учебные материалы</li>
+                            <li>Уроки каллиграфии</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-box">
+                        <h4>Контакты для записи:</h4>
+                        <p>Телефон: +7 (8362) XX-XX-XX</p>
+                        <p>Email: arabic@lingua.ru</p>
+                        <p>Адрес: г. Йошкар-Ола</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Культурные мероприятия</h4>
+                        <p>Каллиграфические мастер-классы, арабская поэзия, знакомство с культурой Ближнего Востока</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Анимация для иконки мечети
+        document.addEventListener('DOMContentLoaded', function() {
+            const mosque = document.querySelector('.mosque-icon');
+            let position = 0;
+            
+            function animateMosque() {
+                position += 0.5;
+                mosque.style.transform = `translateY(${Math.sin(position * 0.1) * 5}px)`;
+                requestAnimationFrame(animateMosque);
+            }
+            
+            animateMosque();
+        });
+    </script>
+</body>
+</html>

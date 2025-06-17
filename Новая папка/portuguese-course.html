@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Португальский язык | Lingua</title>
+    <link rel="stylesheet" href="styles/portuguese-course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Уникальные стили для португальского курса */
+        .course-hero {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/portuguese-bg.jpg');
+        }
+        
+        .portuguese-accent {
+            color: #046A38; /* Португальский зеленый */
+        }
+        
+        .azulejo-pattern {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            right: 30px;
+            top: 30px;
+            background-image: url('images/azulejo-pattern.png');
+            background-size: contain;
+            opacity: 0.7;
+            z-index: 1;
+        }
+        
+        .course-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #046A38;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: #046A38;
+            margin-bottom: 15px;
+        }
+        
+        .wave-decoration {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23046A38" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23046A38" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23046A38"/></svg>') no-repeat;
+            background-size: cover;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="course-detail">
+        <div class="course-hero">
+            <div class="wave-decoration"></div>
+            <div class="container">
+                <div class="azulejo-pattern"></div>
+                <h1>Португальский <span class="portuguese-accent">язык</span></h1>
+                <p>Страстный и мелодичный язык Лиссабона и Рио-де-Жанейро</p>
+                <div class="course-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.5 (76 отзывов)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container course-main">
+            <div class="course-grid">
+                <div class="course-info">
+                    <div class="info-block">
+                        <h2><i class="fas fa-info-circle portuguese-accent"></i> О курсе</h2>
+                        <p>Наш курс португальского языка познакомит вас с одним из самых красивых и эмоциональных языков мира. Мы предлагаем уникальную методику, сочетающую традиционные подходы с элементами бразильских карнавалов и португальского фаду.</p>
+                        <p>Особое внимание уделяется различиям между европейским и бразильским вариантами португальского языка.</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h2><i class="fas fa-tasks portuguese-accent"></i> Особенности курса</h2>
+                        <div class="course-features">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-music"></i></div>
+                                <h3>Изучение через музыку</h3>
+                                <p>Фаду, самба и босса-нова как часть учебного процесса</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                                <h3>Португальская кухня</h3>
+                                <p>Кулинарные мастер-классы на языке</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-globe-americas"></i></div>
+                                <h3>2 варианта языка</h3>
+                                <p>Изучайте оба варианта - португальский и бразильский</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <h2><i class="fas fa-chart-line portuguese-accent"></i> Результаты</h2>
+                        <ul class="results-list">
+                            <li><i class="fas fa-check-circle portuguese-accent"></i> Сможете понимать португальские фаду и бразильские сериалы</li>
+                            <li><i class="fas fa-check-circle portuguese-accent"></i> Овладеете двумя вариантами произношения</li>
+                            <li><i class="fas fa-check-circle portuguese-accent"></i> Свободно общаться в поездках по Португалии и Бразилии</li>
+                            <li><i class="fas fa-check-circle portuguese-accent"></i> Поймете разницу между европейским и бразильским вариантами</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-sidebar">
+                    <div class="pricing-card" style="border-top: 4px solid #046A38;">
+                        <h3>Начните обучение</h3>
+                        <div class="price">6 900 ₽<span>/месяц</span></div>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check portuguese-accent"></i> 8 занятий с носителями</li>
+                            <li><i class="fas fa-check portuguese-accent"></i> До 10 человек в группе</li>
+                            <li><i class="fas fa-check portuguese-accent"></i> Музыкальные вечера</li>
+                            <li><i class="fas fa-check portuguese-accent"></i> Доступ к видеоархиву</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cultural-note" style="border-left-color: #046A38;">
+                        <h4><i class="fas fa-guitar portuguese-accent"></i> Вечера фаду</h4>
+                        <p>Каждый месяц мы проводим музыкальные вечера с исполнением португальских фаду</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="floating-shapes">
+        <div class="shape shape-1" style="background: #046A38;"></div>
+        <div class="shape shape-2" style="background: #FF0000;"></div>
+        <div class="shape shape-3" style="background: #FFD700;"></div>
+    </div>
+    
+    <script>
+        // Анимация для плитки азулежу
+        document.addEventListener('mousemove', function(e) {
+            const azulejo = document.querySelector('.azulejo-pattern');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            azulejo.style.transform = `rotate(${(x - 0.5) * 10}deg) translate(${(x - 0.5) * 20}px, ${(y - 0.5) * 20}px)`;
+        });
+        
+        // Анимация волны
+        const wave = document.querySelector('.wave-decoration');
+        let offset = 0;
+        
+        function animateWave() {
+            offset += 0.5;
+            wave.style.backgroundPositionX = -offset + 'px';
+            requestAnimationFrame(animateWave);
+        }
+        
+        animateWave();
+    </script>
+</body>
+</html>

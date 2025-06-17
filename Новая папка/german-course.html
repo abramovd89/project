@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Немецкий язык | Lingua</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Шапка курса */
+        .course-hero {
+            padding: 100px 0 60px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/german-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        
+        .german-accent {
+            color: #FFCC00; /* Немецкий желтый */
+        }
+        
+        .brandenburg-gate {
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            background: url('images/brandenburg-icon.png') no-repeat center bottom;
+            background-size: contain;
+            opacity: 0.8;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Основной контент */
+        .course-main {
+            padding: 60px 0;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+        }
+        
+        .info-block {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #000000; /* Немецкий черный */
+            border-bottom: 2px solid #FFCC00;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        /* Блоки с информацией */
+        .precision-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .precision-list li {
+            background: url('images/check-icon.png') no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .efficiency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .efficiency-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid #FFCC00;
+        }
+        
+        /* Боковая панель */
+        .course-sidebar {
+            position: sticky;
+            top: 20px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #000000;
+            margin-bottom: 30px;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #000000;
+            margin: 20px 0;
+        }
+        
+        .price-features {
+            list-style-type: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        
+        .price-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            background: url('images/check-icon.png') no-repeat left center;
+            background-size: 18px;
+            padding-left: 28px;
+        }
+        
+        .cultural-note {
+            background: rgba(0, 0, 0, 0.03);
+            padding: 20px;
+            border-left: 3px solid #FFCC00;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-sidebar {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .course-hero {
+                padding: 80px 0 50px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="course-detail">
+        <div class="course-hero">
+            <div class="brandenburg-gate"></div>
+            <div class="container">
+                <h1>Немецкий <span class="german-accent">язык</span></h1>
+                <p>Язык точности, эффективности и богатой культуры</p>
+                <div class="course-rating">
+                    <div class="stars">
+                        ★★★★★ <span>4.6 (98 отзывов)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container course-main">
+            <div class="course-grid">
+                <div class="course-info">
+                    <div class="info-block">
+                        <h2>О курсе</h2>
+                        <p>Наш курс немецкого языка построен на принципах немецкой точности и системности. Программа разработана с учетом современных коммуникативных методик и традиционного подхода к изучению грамматики.</p>
+                        <p>Особое внимание уделяется структуре языка и правильному порядку слов, что является основой немецкой грамматики.</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Преимущества</h2>
+                        <ul class="precision-list">
+                            <li>Систематизированное изучение грамматики</li>
+                            <li>Акцент на правильном произношении</li>
+                            <li>Изучение профессиональной лексики</li>
+                            <li>Подготовка к международным экзаменам</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Эффективность</h2>
+                        <div class="efficiency-grid">
+                            <div class="efficiency-item">
+                                <h3>Грамматика</h3>
+                                <p>Четкая система изучения с нуля до продвинутого уровня</p>
+                            </div>
+                            <div class="efficiency-item">
+                                <h3>Словарный запас</h3>
+                                <p>Методика запоминания 1000 самых важных слов</p>
+                            </div>
+                            <div class="efficiency-item">
+                                <h3>Практика</h3>
+                                <p>Регулярные разговорные занятия с носителями</p>
+                            </div>
+                            <div class="efficiency-item">
+                                <h3>Результаты</h3>
+                                <p>Контроль прогресса после каждого модуля</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-sidebar">
+                    <div class="pricing-card">
+                        <h3>Формат обучения</h3>
+                        <div class="price">8 400 ₽<span>/месяц</span></div>
+                        <ul class="price-features">
+                            <li>12 занятий в месяц</li>
+                            <li>Группы до 6 человек</li>
+                            <li>Доступ к материалам</li>
+                            <li>Сертификат по окончании</li>
+                        </ul>
+                        <div class="contact-info">
+                            <h4>Запись на курс:</h4>
+                            <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                            <p>Email: german@lingua.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cultural-note">
+                        <h4>Культурные аспекты</h4>
+                        <p>В программу включены занятия по немецкой культуре, истории и традициям</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Локальный скрипт для простой анимации
+        document.addEventListener('DOMContentLoaded', function() {
+            const gate = document.querySelector('.brandenburg-gate');
+            let position = 0;
+            let direction = 1;
+            
+            function animateGate() {
+                position += direction * 0.1;
+                if (position > 5) direction = -1;
+                if (position < -5) direction = 1;
+                
+                gate.style.transform = `translateX(-50%) translateY(${position}px)`;
+                requestAnimationFrame(animateGate);
+            }
+            
+            animateGate();
+        });
+    </script>
+</body>
+</html>
